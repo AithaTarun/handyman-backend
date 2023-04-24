@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <style>
+      :root
+      {
+        scroll-behavior: smooth;
+      }
+
+      *, ::after, ::before
+      {
+        box-sizing: border-box;
+      }
+
+      .container
+      {
+        max-width: 720px;
+      }
+
+      .container
+      {
+        width: 100%;
+        padding-right: .75rem;
+        padding-left: .75rem;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .pb-3
+      {
+        padding-bottom: 1rem !important;
+      }
+
+      .card
+      {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: .25rem;
+      }
+
+      .card-body
+      {
+        flex: 1 1 auto;
+        padding: 1rem 1rem;
+      }
+
+      .fw-bold
+      {
+        font-weight: 700 !important;
+      }
+
+      p
+      {
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+    </style>
+</head>
+
+<body style="margin: 0; font-family: system-ui,-apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji','Segoe UI Symbol', 'Noto Color Emoji';  font-size: 1rem;  font-weight: 400;  line-height: 1.5;  color: #212529;  background-color: #FFFFFF;  -webkit-text-size-adjust: 100%;  -webkit-tap-highlight-color: transparent;">
+
+<div class="container" style="text-align: center !important;">
+
+    <div class="container pb-3" style="background-color: #D3D3D3; text-align: center !important;">
+        <img src="https://i.ibb.co/yPfDfNr/Logo.png" style="width: 96px; height: 96px; vertical-align: middle">
+    </div>
+
+    <div class="container" style="display: flex; justify-content: center">
+        <div class="card" style="margin-top: -20px; border-radius: 12px; margin-right: auto; margin-left: auto">
+            <div class="card-body">
+                <p class="card-text fw-bold" style="font-family: Orbitron, serif; font-size: 22px">Welcome to Handyman</p>
+
+                <img src="https://i.ibb.co/cC9KvKh/OTP-Landing.png" style="width: 256px; height: 256px">
+
+                <p>
+                    We are excited to welcome you. First you need to verify your account with below OTP which will be expired within 15 minutes.
+                </p>
+
+                <p class="fw-bold"
+                   style="font-family: Audiowide, serif; font-size: 26px; letter-spacing: 5px; color: rgba(13,110,253, 1) !important;">
+                    <%= otpCode %>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+</html>
