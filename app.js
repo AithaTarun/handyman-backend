@@ -53,42 +53,12 @@ app.use
 
 try
 {
-  app.use //To handle CORS error.
-    (
-      (request,response,next)=>
-      {
-        response.setHeader
-        (
-          'Access-Control-Allow-Origin',
-          '*'
-        );
-
-        response.setHeader
-        (
-          'Access-Control-Allow-Origin', process.env.FRONT_END_URL
-        );
-
-        response.setHeader
-        (
-          'Access-Control-Allow-Headers',
-          'Origin, X-Requested-With, Content-Type, Accept, Authorization'
-        );
-
-        response.setHeader
-        (
-          'Access-Control-Allow-Methods',
-          'GET, POST, PATCH, DELETE, OPTIONS, PUT'
-        );
-
-        response.setHeader
-        (
-          'Access-Control-Allow-Credentials',
-          'true'
-        )
-
-        next();
-      }
-    );
+  app.use(cors({
+  origin: ['*', 'http://localhost', 'http://localhost:8100', 'http://localhost:4200', process.env.FRONT_END_URL],
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+}));
 }
 catch (e)
 {

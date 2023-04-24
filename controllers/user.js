@@ -1,7 +1,7 @@
 const User = require('../models/user');
 const Otp = require('../models/otp');
 
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 const jsonwebtoken = require('jsonwebtoken');
 
